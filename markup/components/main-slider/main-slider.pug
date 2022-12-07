@@ -1,0 +1,15 @@
+mixin main-slider(data)
+    .swiper-container.main-slider
+        .swiper-wrapper
+            each item in data.items
+                .swiper-slide.main-slider__slide
+                    .main-slider__wrapper
+                        .subtext.left= item.subtext1
+                        .main-slider__title= item.title
+                        .subtext.left= item.subtext2
+                        .main-slider__subtext= item.subtext3
+                        a(href='js0').main-slider__link
+                            img.main-slider__img(src= item.src alt= item.alt)
+        // Add Arrows
+        .main-slider-next
+        .main-slider-prev

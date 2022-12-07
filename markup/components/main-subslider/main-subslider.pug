@@ -1,0 +1,8 @@
+mixin main-subslider(data)
+    .swiper-container.main-subslider
+        .swiper-wrapper
+            each item in data.items
+                .swiper-slide.main-subslider__slide
+                    .main-subslider__wrapper
+                        .main-subslider__number= item.number
+                        .main-subslider__text= item.text

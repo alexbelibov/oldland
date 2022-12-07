@@ -1,0 +1,7 @@
+mixin nav-list(data)
+    +b('ul').nav-list
+        each item in data.items
+            +e('li').item
+                +e('a').link
+                    +e('img').img(src= item.src alt= item.alt)
+                    +e('figcaption').text= item.figcaption

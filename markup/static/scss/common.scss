@@ -1,0 +1,114 @@
+// Common styles of the project
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+//.page {
+//
+//}
+//
+//.page__wrapper {
+//    min-height: 100%;
+//    margin-bottom: -50px;
+//}
+//
+//* html .page__wrapper {
+//    height: 100%;
+//}
+//
+//.page__buffer {
+//    height: 50px;
+//}
+
+body{
+    font-family: $FiraSans;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    //background: lighten(saturate(adjust-hue($black, 150), 4.17), 9.41);
+    background: #171919;
+
+    color: $white;
+}
+
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1920px;
+    //background: rgba(lightsteelblue, .1);
+}
+
+
+.subtext{
+    display: inline-block;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    &.left,
+    &.right{
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 1px;
+            background-color: $white;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &.left{
+        padding-left: 100px;
+        &:before {
+            left: 0;
+        }
+    }
+    &.right{
+        padding-right: 100px;
+        &:before{
+            right: 0;
+        }
+    }
+}
+
+.section-subtext{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1;
+    text-align: right;
+    text-transform: uppercase;
+    span{
+        font-weight: 100;
+        opacity: 0.5;
+    }
+}
+
+.swiper-container {
+    overflow: hidden;
+}

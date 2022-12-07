@@ -1,0 +1,209 @@
+//Easing
+$custom-easing: cubic-bezier(1, .1, 0, 0.9);
+
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+[data-toggle='modal'] {
+    height: 24px;
+    width: 24px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    i {
+        font-size: 2rem;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(black, 0.9);
+    display: none;
+    z-index: -1;
+    transform: translateY(1rem) translateZ(0);
+    transition: all 0.3s ease;
+
+    &.active {
+        visibility: visible;
+        transform: translateY(0) translateZ(0);
+        display: block;
+        z-index: 3;
+        .content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    [data-dismiss='modal'] {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        top: 38px;
+        right: 38px;
+        span {
+            display: block;
+            color: rgba($white, 0.2);
+            font-size: .5rem;
+            transform: translateY(1.1rem);
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0.3s;
+        &.show-tag-results {
+            & > div {
+                &.results {
+                    visibility: hidden;
+                    transform: translateX(-100%);
+                }
+                &.tag-results {
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+            }
+        }
+        & > div {
+            position: absolute;
+            width: 100%;
+            top: 8rem;
+            left: 0;
+            transition: all 0.3s $custom-easing;
+            &.results {
+                visibility: visible;
+                transform: translateX(0);
+            }
+            &.tag-results {
+                visibility: hidden;
+                transform: translateX(100%);
+            }
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $white;
+        font-size: .75rem;
+        margin-top: 0;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        background: none;
+        border-bottom: 1px solid $main-color;
+        border-width: 0 0 1px 0;
+        color: $white;
+        padding: 1.5rem 0;
+        font-size: 2rem;
+        font-weight: 100;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            position: relative;
+            color: darken($white, 41.96);
+            font-size: 1.15rem;
+            padding: .75rem .5rem .75rem 1.75rem;
+            cursor: pointer;
+            &:before {
+                content: '';
+                position: absolute;
+                box-sizing: border-box;
+                top: 50%;
+                left: .5rem;
+                margin-top: -4px;
+                display: block;
+                height: 8px;
+                width: 8px;
+                border: 2px solid $white;
+                border-radius: 100%;
+            }
+            &:hover, &:focus {
+                background: rgba($white, 0.1);
+                outline: none;
+            }
+        }
+    }
+
+    ul + h2 {
+        border-top: 1px solid rgba($white, 0.1);
+        padding-top: 2rem;
+        margin-top: 1rem;
+    }
+
+    .tag-results {
+        .selected-tag {
+            display: block;
+            position: absolute;
+            left: 3rem;
+            background: $main-color;
+            color: $white;
+            padding: .5rem 1rem;
+        }
+        & > ul {
+            margin-left: 35%;
+            width: 60%;
+        }
+
+    }
+
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    ::placeholder {
+        color: rgba(white, 0.3);
+        font-weight: 100;
+    }
+}
+
+.material-icons {
+    color: $white;
+}
+
+.search{
+    &.position{
+        margin-top: 40px;
+    }
+}

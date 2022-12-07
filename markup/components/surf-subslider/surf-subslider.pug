@@ -1,0 +1,24 @@
+mixin surf-subslider(data)
+
+    .swiper-container.surf-subslider
+        .swiper-wrapper
+            each item in data
+                .swiper-slide.surf-subslider__slide
+                    .surf-subslider__point(class= item.point)
+                        .surf-subslider__cnt
+                            .surf-subslider__coast=item.coast
+                            .surf-subslider__country=item.country
+
+                            ul.surf-subslider__list.subslider-list
+                                li.subslider-list__item
+                                    img.subslider-list__icon(src= item.wave_src alt= item.wave_alt)
+                                    .subslider-list__indicator= item.wave_indicator
+                                    .subslider-list__name= item.wave_name
+                                li.subslider-list__item
+                                    img.subslider-list__icon(src= item.water_src alt= item.water_alt)
+                                    .subslider-list__indicator= item.water_indicator
+                                    .subslider-list__name= item.water_name
+                                li.subslider-list__item
+                                    img.subslider-list__icon(src= item.wind_src alt= item.wind_alt)
+                                    .subslider-list__indicator= item.wind_indicator
+                                    .subslider-list__name= item.wind_name

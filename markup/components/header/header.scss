@@ -1,0 +1,31 @@
+.header{
+    position: relative;
+    color: $white;
+    &__title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 440px;
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 1;
+        text-transform: uppercase;
+        opacity: 0.07;
+        z-index: 2;
+    }
+}
+
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-bottom: 30px;
+    border-right: 1px solid rgba($white, .25);
+    z-index: 3;
+}

@@ -1,0 +1,93 @@
+.surf-subslider{
+    position: relative;
+    max-width: 1440px;
+    height: 700px;
+    background: url('%=static=%content/world-map-dots.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__point{
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $main-color;
+        box-shadow: 0 0 20px 4px  rgba($main-color, .9);
+        z-index: 3;
+    }
+    &__cnt{
+        display: none;
+        width: 300px;
+        //height: 215px;
+        border-radius: 15px;
+        padding: 28px 30px 30px 32px;
+        background: rgba($black, .3);
+    }
+    &__coast{
+        position: relative;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: uppercase;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 1px;
+            bottom: -10px;
+            background: $main-color;
+        }
+    }
+    &__country{
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.surf-subslider__slide.swiper-slide-active{
+    .surf-subslider__point{
+        background: red;
+        .surf-subslider__cnt{
+            display: block;
+        }
+    }
+}
+
+
+
+.subslider-list{
+    margin-top: 30px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+//.slide-01{ top: 340px; left: 50px;  }
+//.slide-02{ top: 295px; left: 50px;  }
+//.slide-03{ top: 320px; left: 100px; }
+//.slide-04{ top: 500px; left: 30px;  }
+//.slide-05{ top: 215px; left: 10px;  }
+//.slide-06{ top: 550px; left: -22px; }
+//.slide-07{ top: 385px; left: -15px; }
+//.slide-08{ top: 305px; left: 55px;  }
+//.slide-09{ top: 500px; left: -12px; }
+
+.point-01{ top: 340px; left: 140px; }
+.point-02{ top: 295px; left: 120px; }
+.point-03{ top: 320px; left: 150px; }
+.point-04{ top: 500px; left: 60px;  }
+.point-05{ top: 215px; left: 10px;  }
+.point-06{ top: 550px; left: -30px; }
+.point-07{ top: 385px; left: -50px; }
+.point-08{ top: 305px; left: 10px;  }
+.point-09{ top: 500px; left: -80px; }
+
+
+

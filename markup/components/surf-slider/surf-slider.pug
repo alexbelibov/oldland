@@ -1,0 +1,12 @@
+mixin surf-slider(data)
+    .swiper-container.surf-slider
+        .swiper-wrapper
+            each item in data
+                .swiper-slide.surf-slider__slide
+                    .surf-slider__title!= item.title
+                    .surf-slider__location!= item.location
+                    a.surf-slider__btn View&nbsp;
+                        span  serf
+        // Add Arrows
+        .surf-slider-next
+        .surf-slider-prev

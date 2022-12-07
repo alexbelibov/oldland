@@ -1,0 +1,17 @@
+include ../surf-subslider/surf-subslider
+include ../surf-slider/surf-slider
+
+mixin surf(data)
+    section.surf
+        .container
+            +b.surf-info
+                +b.surf-title
+                    +e('span')= surf.span
+                        +e('h3')= surf.h3
+                +b.surf-wrapper
+                    +b.subtext.left Current location
+                    +b.section-subtext California <span>|</span> USA
+        +surf-subslider(data.items)
+        +surf-slider(data.items)
+
+

@@ -1,0 +1,7 @@
+mixin time(data)
+    +b('time').time.position(datetime='20.06.2019')
+        +e.day= time.day
+        +e.bottom
+            +e('span').month= time.month
+            +e('span').delimetr |
+            +e('span').year= time.year

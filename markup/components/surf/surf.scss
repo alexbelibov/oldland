@@ -1,0 +1,46 @@
+.surf{
+    padding: 160px 0;
+}
+
+.surf-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.surf-title{
+    span{
+        position: relative;
+        display: inline-block;
+        font-size: 200px;
+        font-weight: 800;
+        color: rgba($white, .02);
+        transform: translateX(-50px);
+    }
+    h3{
+        position: absolute;
+        top: 0;
+        right: -5px;
+        color: $white;
+        font-size: 80px;
+        &:before{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 1px;
+            background-color: $main-color;
+        }
+    }
+}
+
+
+
+.surf-wrapper{
+    position: absolute;
+    top: 130px;
+    right: 80px;
+    z-index: 2;
+}
+
+

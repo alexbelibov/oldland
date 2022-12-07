@@ -1,0 +1,28 @@
+.time{
+    display: flex;
+    flex-direction: column;
+    &__day{
+        font-weight: 800;
+        font-size: 72px;
+    }
+    &__month,
+    &__year{
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 1.4px;
+    }
+    &__delimetr{
+        font-weight: 100;
+        line-height: 19px;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.time{
+    &.position{
+        margin-top: 30px;
+    }
+}

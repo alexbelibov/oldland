@@ -1,0 +1,163 @@
+.surf-slider{
+    padding-top: 110px;
+    &__slide:hover{
+        .surf-slider__btn{
+            display: flex;
+        }
+        &:before{
+            background: rgba(28, 33, 33, .3);
+        }
+    }
+
+    &__title{
+        position: relative;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 1;
+        text-transform: uppercase;
+        width: 150px;
+    }
+    &__location{
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 45px;
+        bottom: 80px;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 8px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+        span{
+            font-weight: 100;
+        }
+    }
+    &__btn{
+        //display: flex;
+        display: none;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        align-self: center;
+        bottom: 0;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 36px;
+        span{
+            position: relative;
+            background: $main-color;
+            display: inline-block;
+            padding: 17px 57px 17px 17px;
+            margin-left: 19px;
+            &:before{
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 1px;
+                top: 50%;
+                left: -10px;
+                transform: translateY(-50%);
+                background: $white;
+            }
+            &:after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                width: 25px;
+                height: 21px;
+                right: 17px;
+                background: url('%=static=%content/next.svg');
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+.surf-slider__slide{
+    width: 390px;
+    height: 750px;
+    padding: 70px 45px 0 45px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(28, 33, 33, .85);
+    }
+
+    &:nth-child(4n + 1){
+        margin-top: 32px;
+    }
+    &:nth-child(4n + 3){
+        margin-top: 89px;
+    }
+    &:nth-child(1){
+       background: url('%=static=%content/surf-slide-01.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(2){
+        background: url('%=static=%content/surf-slide-02.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(3){
+        background: url('%=static=%content/surf-slide-03.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(4){
+        background: url('%=static=%content/surf-slide-04.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(5){
+        background: url('%=static=%content/surf-slide-01.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(6){
+        background: url('%=static=%content/surf-slide-02.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(7){
+        background: url('%=static=%content/surf-slide-03.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(8){
+        background: url('%=static=%content/surf-slide-04.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(9){
+        background: url('%=static=%content/surf-slide-01.jpg') center center no-repeat;
+        background-size: cover;
+    }
+}
+
+.surf-slider-next,
+.surf-slider-prev{
+    position: absolute;
+    cursor: pointer;
+    top: 40px;
+    width: 25px;
+    height: 21px;
+    z-index: 4;
+    opacity: .25;
+}
+
+.surf-slider-next{
+    background: url('%=static=%content/next.svg');
+    right: 80px;
+}
+.surf-slider-prev{
+    background: url('%=static=%content/prev.svg');
+    right: 120px;
+}
+
+.swiper-slide.surf-slider__slide.swiper-slide-active{
+    &:before{
+        background-color: rgba(28, 33, 33, .3);
+    }
+}
